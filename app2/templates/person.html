@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>READ lista de Pessoas</title>
+</head>
+<body>
+<p>Este exemplo é o READ do CRUD.</p>
+
+{%if tamanho > 0%}
+<ol>
+{% for i in lista %}
+<li><a href="{% url 'update_person' i.id %}">{{i}} </a><a href="{%url 'delete_person' i.id%}"> Deletar</a></li>
+{%endfor%}
+</ol>
+{%else%}
+<p>Ninguém declarado!</p>
+{%endif%}
+
+<a href="{%url 'person_new'%}">Novo cadastro</a>
+<a href="{% url 'logout' %}">Sair</a>
+
+</body>
+</html>

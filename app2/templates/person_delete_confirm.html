@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deletar</title>
+</head>
+<body>
+<h1>Deseja deletar o cadastro de {{ person.first_name }}</h1>
+<form method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+<button type="submit" >Deletar!</button>
+</form>
+</body>
+</html>
